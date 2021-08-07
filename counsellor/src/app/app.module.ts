@@ -25,8 +25,7 @@ import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ContactComponent } from './contact/contact.component';
 import { ClientHomeComponent } from './client-home/client-home.component';
-
-
+import { AppointmentComponent } from './appointment/appointment.component';
 
 
 @NgModule({
@@ -43,6 +42,9 @@ import { ClientHomeComponent } from './client-home/client-home.component';
     PagenotfoundComponent,
     ContactComponent,
     ClientHomeComponent,
+    AppointmentComponent,
+
+  
   
   ],
   imports: [
