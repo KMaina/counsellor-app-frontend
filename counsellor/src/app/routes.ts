@@ -6,10 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { GroupsComponent } from './groups/groups.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { AuthGuard } from './auth/auth.guard';
+import { SidebarComponent } from './sidebar/sidebar.component';
 export const appRoutes: Routes = [
     { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'groups', component: GroupsComponent},
     { path: 'appointments', component: AppointmentsComponent},
+    { path: 'sidebar', component: SidebarComponent},
+
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     
     {
