@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
@@ -19,7 +20,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { ToastrModule } from 'ngx-toastr';
 
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from '././sidebar/sidebar.component';
 import { GroupsComponent } from './groups/groups.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 
@@ -50,7 +51,7 @@ import { ClientHomeComponent } from './client-home/client-home.component';
     PagenotfoundComponent,
     ContactComponent,
     ClientHomeComponent,
-  
+
   ],
   imports: [
     BrowserModule,
@@ -63,9 +64,7 @@ import { ClientHomeComponent } from './client-home/client-home.component';
     NgProgressHttpClientModule
   ],
   providers: [UserService],
-    RouterModule.forRoot(appRoutes)
-  ],
-  providers: [UserService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
