@@ -1,1 +1,43 @@
-<p>appointment-form works!</p>
+<div class="container">
+    <form (ngSubmit)='bookSession()' #appointmentForm='ngForm'>
+        <div class="form-group">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" class="form-control" required [(ngModel)]="bookAppointment.date"
+                    name="date" #date='ngModel'>
+                <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
+                    <p>Date is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="timeStart">From</label>
+            <input type="text" required class="form-control" id="timeStart" [(ngModel)]="bookAppointment.timeStart"
+                name="timeStart" #timeStart='ngModel'>
+            <!-- Dispaly {{newGoal.name}} -->
+            <div [hidden]="timeStart.valid || timeStart.pristine" class="alert alert-danger">
+                <p>Time is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="timeEnd">To</label>
+            <input type="text" required class="form-control" id="timeEnd" [(ngModel)]="bookAppointment.timeEnd"
+                name="timeEnd" #ttimeEnd='ngModel'>
+            <!-- Dispaly {{newGoal.name}} -->
+            <!-- <div [hidden]="timeEnd.valid || timeEnd.pristine" class="alert alert-danger">
+                <p>Time is required</p>
+            </div> -->
+        </div>
+        <div class="form-group">
+            <label for="message">message</label>
+            <textarea class="form-control" id="message" rows="4" required [(ngModel)]="bookAppointment.message"
+                name="message" #message='ngModel'></textarea>
+            <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+                <p>Issue description is required</p>
+            </div>
+            
+        </div><br>
+        <button type="submit" (click)="bookSession()"class="btn btn-success">Book</button>
+    </form>
+</div>
+
