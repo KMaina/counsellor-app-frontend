@@ -38,8 +38,12 @@ import { AboutComponent } from './compoments/about/about.component';
 import { ContactComponent } from './compoments/contact/contact.component';
 import { ClientGroupsComponent } from './compoments/client-groups/client-groups.component';
 import { GroupChatComponent } from './compoments/group-chat/group-chat.component';
-import { MedicationComponent } from './compoments/medication/medication.component';
 
+
+import { authInterceptorProviders } from './auth/auth.interceptor';
+import { CounsellorServiceService } from './counsellor/counsellor-service.service';
+import { ClientlistComponent } from './counsellor/clientlist/clientlist.component';
+import { MedicationComponent } from './medication/medication.component';
 
 
 
@@ -65,6 +69,12 @@ import { MedicationComponent } from './compoments/medication/medication.componen
     GroupChatComponent,
     MedicationComponent,
   
+    ClientHomeComponent,
+    ClientlistComponent,
+    MedicationComponent,
+    
+    
+
   ],
 
 
@@ -79,7 +89,8 @@ import { MedicationComponent } from './compoments/medication/medication.componen
     NgProgressModule.forRoot(),
     NgProgressHttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService, authInterceptorProviders],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
