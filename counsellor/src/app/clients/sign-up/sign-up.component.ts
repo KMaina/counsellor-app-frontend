@@ -12,6 +12,7 @@ import { User } from '../../shared/user.model';
 })
 export class SignUpComponent implements OnInit {
   user!: User;
+  // userRegistrationForm
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   form: any = {
     username: null,
@@ -19,7 +20,7 @@ export class SignUpComponent implements OnInit {
     firstName: null,
     lastName: null,
     password: null,
-    role: [],
+    role: null,
   };
   isSuccessful = false;
   isSignUpFailed = false;
@@ -31,9 +32,9 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const { username, email, lastName, firstName, password } = this.form;
+    const { username, email, lastName, firstName, password, role, is_counsellor, is_client } = this.form;
 
-    this.userService.register(username, email, lastName, firstName, password).subscribe(
+    this.userService.register(username, email, firstName, lastName, password, role).subscribe(
       data => {
         console.log(data);
         this.isSuccessful = true;

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from '../taken-storage.service';
 import { Router } from '@angular/router';
@@ -23,12 +24,16 @@ export class NavbarComponent implements OnInit {
       this.username = user.username;
     }
   }
+
   signOut(): void {
     localStorage.clear();
-    this.router.navigate(['/']);
+    this.router.navigate(['home']);
 
   }
   
-}
+
+  }
+  
+
 
 

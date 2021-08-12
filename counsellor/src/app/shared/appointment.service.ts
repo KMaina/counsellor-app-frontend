@@ -16,7 +16,7 @@ const httpOptions = {
 export class AppointmentService {
  
  api_url = "http://127.0.0.1:8000/";
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, ) { }
 
   bookSession(appointment:Appointment): Observable<any> {
     const headers = { 'Authorization': 'Bearer access','content-type': 'application/json'}  

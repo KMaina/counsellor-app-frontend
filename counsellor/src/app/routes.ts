@@ -15,6 +15,7 @@ import { AppointmentsComponent } from './compoments/appointments/appointments.co
 import { AboutComponent } from './compoments/about/about.component';
 import { ContactComponent } from './compoments/contact/contact.component';
 import { ClientGroupsComponent } from './compoments/client-groups/client-groups.component';
+import { ClientlistComponent } from './counsellor/clientlist/clientlist.component';
 
 
 export const appRoutes: Routes = [
@@ -22,6 +23,7 @@ export const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
     
     { path: 'sidebar', component: SidebarComponent },
+
     { path: '', redirectTo: '/home', pathMatch: 'full' },
 
     {
@@ -30,14 +32,18 @@ export const appRoutes: Routes = [
     },
     {
         path: 'login', component: ClientsComponent,
+
         children: [{ path: '', component: SignInComponent }]
     },
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'client-profile', component: ClientProfileComponent },
 
+    { path: 'client-profile', component: ClientProfileComponent },
     
     { path: 'groups', component: GroupsComponent },
+
     { path: 'appointments', component: AppointmentsComponent },
+
+    { path: 'clientslist', component: ClientlistComponent },
 
     { path: 'about', component: AboutComponent },
 
@@ -45,6 +51,16 @@ export const appRoutes: Routes = [
 
     { path: 'client-home', component: ClientHomeComponent },
     { path: 'client-group', component: ClientGroupsComponent },
+
+
+    { path: 'logout', component: HomeComponent },
+
+
+    { path: '**', component: PagenotfoundComponent },
+
+    
+
+    
 
 
     { path:'**', component: PagenotfoundComponent },
