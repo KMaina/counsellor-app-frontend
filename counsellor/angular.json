@@ -23,7 +23,6 @@
             "allowedCommonJsDependencies": [
               "lodash"
            ],
-            "outputPath": "dist/counsellor",
             "outputPath": "../static/front-end",
             "index": "src/index.html",
             "main": "src/main.ts",

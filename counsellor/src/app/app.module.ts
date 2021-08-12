@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { ToastrModule } from 'ngx-toastr';
-import { SidebarComponent } from './sidebar/sidebar.component';
+
+import { SidebarComponent } from '././sidebar/sidebar.component';
 import { GroupsComponent } from './groups/groups.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 
@@ -29,10 +31,9 @@ import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ContactComponent } from './contact/contact.component';
 import { ClientHomeComponent } from './client-home/client-home.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
-
-import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { AuthGuard } from './auth/auth.guard';
     PagenotfoundComponent,
     ContactComponent,
     ClientHomeComponent,
-  
+    ProfileComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -64,9 +66,7 @@ import { AuthGuard } from './auth/auth.guard';
     NgProgressHttpClientModule
   ],
   providers: [UserService],
-    RouterModule.forRoot(appRoutes)
-  ],
-  providers: [UserService, AuthGuard],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
