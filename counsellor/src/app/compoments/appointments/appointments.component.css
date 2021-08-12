@@ -360,13 +360,11 @@ nav .profile-details i{
     overflow: hidden;
     left: 220px;
   }
-
-  .home-section nav {
+  .home-section nav{
     width: calc(100% - 60px);
     left: 60px;
   }
-
-  .sidebar.active~.home-section nav {
+  .sidebar.active ~ .home-section nav{
     width: calc(100% - 220px);
     left: 220px;
   }

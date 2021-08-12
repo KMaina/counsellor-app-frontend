@@ -12,6 +12,7 @@ import { User } from '../../shared/user.model';
 })
 export class SignUpComponent implements OnInit {
   user!: User;
+  // userRegistrationForm
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   form: any = {
     username: null,

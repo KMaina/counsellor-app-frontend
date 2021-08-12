@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
 import { Router } from '@angular/router';
 // import { CounsellorServiceService } from './counsellor/counsellor-service.service';
 // import { Appointments } from './shared/user.model';

@@ -41,7 +41,7 @@ export class SignInComponent implements OnInit {
     const { email, password } = this.form;
 
     this.userService.login(email, password).subscribe(
-      data => {
+    data  => {
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
 
