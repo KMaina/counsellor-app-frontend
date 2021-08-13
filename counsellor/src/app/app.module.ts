@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
@@ -22,15 +23,27 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { SidebarComponent } from '././sidebar/sidebar.component';
 import { GroupsComponent } from './groups/groups.component';
-import { AppointmentsComponent } from './appointments/appointments.component';
+
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { ClientProfileComponent } from './client-profile/client-profile.component';
 
-import { AboutComponent } from './about/about.component';
+
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ContactComponent } from './contact/contact.component';
+import { AppointmentFormComponent } from './forms/appointment-form/appointment-form.component';
+
 import { ClientHomeComponent } from './client-home/client-home.component';
+import { AppointmentsComponent } from './compoments/appointments/appointments.component';
+import { AboutComponent } from './compoments/about/about.component';
+import { ContactComponent } from './compoments/contact/contact.component';
+import { ClientGroupsComponent } from './compoments/client-groups/client-groups.component';
+import { GroupChatComponent } from './compoments/group-chat/group-chat.component';
+
+
+import { authInterceptorProviders } from './auth/auth.interceptor';
+import { CounsellorServiceService } from './counsellor/counsellor-service.service';
+import { ClientlistComponent } from './counsellor/clientlist/clientlist.component';
+import { MedicationComponent } from './medication/medication.component';
 import { ProfileComponent } from './profile/profile.component';
 
 
@@ -43,29 +56,44 @@ import { ProfileComponent } from './profile/profile.component';
     SignUpComponent,
     CounsellorComponent,
     HomeComponent,
+    NavbarComponent,
+    ClientProfileComponent,
+    PagenotfoundComponent,
+    AppointmentFormComponent,
+    ClientHomeComponent,
     SidebarComponent,
     GroupsComponent,
     AppointmentsComponent,
-    NavbarComponent,
-    ClientProfileComponent,
     AboutComponent,
-    PagenotfoundComponent,
     ContactComponent,
+    ClientGroupsComponent,
+    GroupChatComponent,
+    MedicationComponent,
+  
     ClientHomeComponent,
+    ClientlistComponent,
+    MedicationComponent,
     ProfileComponent,
+    
+    
 
   ],
+
+
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
     NgProgressModule.forRoot(),
-    NgProgressHttpClientModule
+    NgProgressHttpClientModule,
+    FormsModule,
+    
   ],
-  providers: [UserService],
+  providers: [UserService, authInterceptorProviders],
 
   bootstrap: [AppComponent]
 })

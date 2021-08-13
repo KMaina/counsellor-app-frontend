@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Groups } from '../groups';
+import { AppointmentService } from '../shared/appointment.service';
+import { Groups } from '../shared/user.model';
 
 
 @Component({
@@ -8,11 +9,17 @@ import { Groups } from '../groups';
   styleUrls: ['./groups.component.css']
 })
 export class GroupsComponent implements OnInit {
-  newGroup = new Groups("","","");
-  constructor() { }
+  newGroup = new Groups("", "", "");
+  constructor(private groupService: AppointmentService) { }
 
   ngOnInit(): void {
   }
-  addGroup(): void {}
+  addGroup() {
+    this.groupService.createGroup(this.newGroup).subscribe(data => {
+      console.log(data)
+    })
+  }
+  
+  
 
 }

@@ -6,13 +6,15 @@ import { HomeComponent } from './home/home.component';
 // import { AuthGuard } from './auth/auth.guard';
 import { ClientsComponent } from './clients/clients.component';
 import { GroupsComponent } from './groups/groups.component';
-import { AppointmentsComponent } from './appointments/appointments.component';
 import { ClientProfileComponent } from './client-profile/client-profile.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
+
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ClientHomeComponent } from './client-home/client-home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AppointmentsComponent } from './compoments/appointments/appointments.component';
+import { AboutComponent } from './compoments/about/about.component';
+import { ContactComponent } from './compoments/contact/contact.component';
+import { ClientGroupsComponent } from './compoments/client-groups/client-groups.component';
 
 
 
@@ -42,6 +44,7 @@ export const AppRoutingModule: Routes = [
   { path: 'client-home', component: ClientHomeComponent },
 
   { path: 'sidebar', component: SidebarComponent },
+  { path: 'client-group', component: ClientGroupsComponent }
 
 
 ];
