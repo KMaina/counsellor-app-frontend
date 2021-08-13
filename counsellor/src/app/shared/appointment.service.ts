@@ -60,6 +60,15 @@ createGroup(group:Groups):Observable<any>{
     )
     )
   }
+  updateAppointment(appointment: Appointment): Observable<Appointment> {
+    return this.http.put<Appointment>(this.api_url, appointment, httpOptions)  
+    console.log(appointment) 
+  }
+  deleteAppointment(id: number): Observable<unknown> {
+    const url = `${this.api_url}/${id}`; // DELETE api/heroes/42
+    return this.http.delete(url, httpOptions)
+     
+  }
   }
  
 
