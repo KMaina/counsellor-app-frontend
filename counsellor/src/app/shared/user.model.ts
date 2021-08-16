@@ -8,21 +8,18 @@ export class User {
     
 }
 
+
+
+
 export class Appointment {
-    _id!: string;
-    date!: Date;
-    timeStart!: string;
-    timeEnd!: string;
-    message!: string;
-}
-
-
-export class Appointments{
-
-    date!: Date;
-    timeStart!: string;
-    timeEnd!: string;
-    message!: string;
+    constructor(
+        public user: string,
+        public id: number,
+        public date: Date,
+        public timeStart: string,
+        public timeEnd: string,
+        public message: string,
+    ){}
 }
 
 
@@ -38,3 +35,4 @@ export class Users{
 export class Groups {
     constructor(public name: string, public description: string, public category: string) { }
 }
+

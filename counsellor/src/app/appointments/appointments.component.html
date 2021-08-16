@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col-md-4">
+<div class="row" style="font-family: 'Domine', serif;">
+  <div class="col-md-2">
     <!DOCTYPE html>
     <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
     <html lang="en" dir="ltr">
@@ -15,34 +15,36 @@
     <body>
       <div class="sidebar">
         <div class="logo-details">
-          <img src="https://img.icons8.com/ios-filled/50/000000/mental-health.png" />
-          <span class="logo_name" style="font-size:30px;">Client</span>
+          <img src="https://img.icons8.com/ios-filled/30/000000/mental-health.png" />
+          <span class="logo_name" style="font-size:20px;">Client</span>
         </div>
         <ul class="nav-links">
           <li>
             <a href="/home" class="active">
               <img src="https://img.icons8.com/material-sharp/24/000000/home.png" />
-              <span class="links_name">Home</span>
+              <span class="links_name" >   Home</span>
             </a>
           </li>
           <br>
           <li>
             <a href="/appointments">
-              <img src="https://img.icons8.com/ios-glyphs/30/000000/property-time.png" />
-              <span class="links_name">Book Session</span>
+              <img src="https://img.icons8.com/ios-glyphs/24/000000/property-time.png" />
+              <span class="links_name"> Book Session</span>
             </a>
           </li>
           <br>
           <li>
             <a href="#">
-              <img src="https://img.icons8.com/ios-glyphs/30/000000/list--v1.png" />
+         
+              <img src="https://img.icons8.com/android/24/000000/google-groups.png" />
               <span class="links_name">Group Members</span>
             </a>
           </li>
           <br>
           <li>
             <a href="/groups">
-              <img src="https://img.icons8.com/android/24/000000/google-groups.png" />
+              <img src="https://img.icons8.com/ios-glyphs/24/000000/list--v1.png" />
+          
               <span class="links_name">Prescribed Medication</span>
             </a>
           </li>
@@ -87,15 +89,31 @@
 
     </html>
   </div>
-  <div class="col-md-8" style="margin-top:50px">
+  <div class="col-md-3 " ></div>
+  <div class="col-md-4 " style="margin-top:50px;">
 
 
 
-    <div class="container">
-      <form (ngSubmit)='bookSession()' #appointmentForm='ngForm'>
+    <div class="container" style="font-family: 'Domine', serif; color: black;">
+      <div class="form-group">
+        <!-- <label for="timeStart">Name</label>
+        <input type="text" required class="form-control" id="user" [(ngModel)]="bookAppointment.user"
+          name="user" #user='ngModel'> -->
+        <!-- Dispaly {{newGoal.name}} -->
+        <div [hidden]="timeStart.valid || timeStart.pristine" class="alert alert-danger">
+          <p>Time is required</p>
+        </div>
+      </div>
+      <form (ngSubmit)='bookSession()' #appointmentForm='ngForm' style="font-family: 'Domine', serif; font-size: 30px;">
         <div class="form-group">
           <div class="form-group">
-            <label for="date">Date</label>
+            
+           
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="form-group">
+            <label for="date" style="font-size: 20px; color: black;">Date</label>
             <input type="date" id="date" class="form-control" required [(ngModel)]="bookAppointment.date" name="date"
               #date='ngModel'>
             <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
@@ -104,8 +122,8 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="timeStart">From</label>
-          <input type="text" required class="form-control" id="timeStart" [(ngModel)]="bookAppointment.timeStart"
+          <label for="timeStart"  style="font-size: 20px; color: black;">From</label>
+          <input type="time" required class="form-control" id="timeStart" [(ngModel)]="bookAppointment.timeStart"
             name="timeStart" #timeStart='ngModel'>
           <!-- Dispaly {{newGoal.name}} -->
           <div [hidden]="timeStart.valid || timeStart.pristine" class="alert alert-danger">
@@ -113,8 +131,8 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="timeEnd">To</label>
-          <input type="text" required class="form-control" id="timeEnd" [(ngModel)]="bookAppointment.timeEnd"
+          <label for="timeEnd"  style="font-size: 20px; color: black;">To</label>
+          <input type="time" required class="form-control" id="timeEnd" [(ngModel)]="bookAppointment.timeEnd"
             name="timeEnd" #ttimeEnd='ngModel'>
           <!-- Dispaly {{newGoal.name}} -->
           <!-- <div [hidden]="timeEnd.valid || timeEnd.pristine" class="alert alert-danger">
@@ -122,7 +140,7 @@
             </div> -->
         </div>
         <div class="form-group">
-          <label for="message">message</label>
+          <label for="message"  style="font-size: 20px; color: black; margin-bottom:20px;">Issue</label>
           <textarea class="form-control" id="message" rows="4" required [(ngModel)]="bookAppointment.message"
             name="message" #message='ngModel'></textarea>
           <div [hidden]="message.valid || message.pristine" class="alert alert-danger">

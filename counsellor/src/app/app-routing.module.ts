@@ -11,7 +11,7 @@ import { ClientProfileComponent } from './client-profile/client-profile.componen
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ClientHomeComponent } from './client-home/client-home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { AppointmentsComponent } from './compoments/appointments/appointments.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
 import { AboutComponent } from './compoments/about/about.component';
 import { ContactComponent } from './compoments/contact/contact.component';
 import { ClientGroupsComponent } from './compoments/client-groups/client-groups.component';

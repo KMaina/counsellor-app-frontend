@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppointmentService } from 'src/app/shared/appointment.service';
-import { Appointment } from 'src/app/classes/appointment';
+import { AppointmentService } from '../shared/appointment.service';
+import { Appointment } from '../shared/user.model';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class AppointmentsComponent implements OnInit {
   // bookAppointment!: Appointment
 
 
-  bookAppointment : Appointment
+  bookAppointment = new Appointment("",0,new Date(),"","","")
 
 
 
