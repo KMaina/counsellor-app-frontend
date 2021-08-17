@@ -1,40 +1,27 @@
-<!-- <div class="container">
-  <div class="row">
-    <div class="col s8 offset-s2">
-      <div class="card grey lighten-2">
-        <div class="card-tabs">
-          <ul class="tabs tabs-fixed-width tabs-transparent">
-            <li class="tab">
-              <a routerLink='/login' routerLinkActive='active'>Sign In</a>
-            </li>
-            <li class="tab">
-              <a routerLink='/signup' routerLinkActive='active'>Sign Up</a>
-            </li>
-          </ul>
-        </div>
-        <div class="card-content white">
-          <div class="row">
-            <router-outlet></router-outlet>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
+<div class="container">
+  <h2 style="text-align:center;">Appointmnets</h2>
+  <ul>
+    <ol *ngFor="let appoint of appointmentlist">
+      <a routerLink="/appoint/{{appoint.id}}">
+        <span class="badge">{{appoint.id}} {{appoint.name}}</span>
+      </a>
+    </ol>
+  </ul>
+</div>
 
 
+<table mdbTable>
+  <thead>
+    <tr>
+      <th  *ngFor="let appoint of appointmentlist" scope="col">{{appoint.id}} {{appoint.name}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let appoint of appointmentlist">
+      <th scope="row">{{appoint.name}}</th>
+      <td>{{appoint.id}}</td>
+      <td>{{appoint.name}}</td>
 
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Time start</th>
-    <th>Time End</th>
-    <th>Message</th>
-  </tr>
-  <tr *ngFor="let appoint of appointmentlist">
-    <td>{{appoint.date}}</td>
-    <td>{{appoint.timeStart}}</td>
-    <td>{{appoint.timeEnd}}</td>
-    <td>{{appoint.message}}</td>
-  </tr>
+    </tr>
+  </tbody>
 </table>

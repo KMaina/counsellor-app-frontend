@@ -13,7 +13,7 @@ export class User {
 
 export class Appointment {
     constructor(
-        public user: string,
+        public name: string,
         public id: number,
         public date: Date,
         public timeStart: string,
